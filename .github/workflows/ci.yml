@@ -1,0 +1,43 @@
+name: Docker CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+
+    - name: Build and Start Stack
+      run: |
+        docker-compose up -d --build
+        
+    - name: Wait for Services to be Healthy
+      run: |
+        timeout 60s bash -c 'until curl --silent --fail http://localhost:3000/api/health || curl --silent --fail http://localhost:3000; do echo "Waiting for API..."; sleep 2; done'
+        echo "API is up!"
+        
+    - name: Check Frontend availability
+      run: |
+        timeout 60s bash -c 'until curl --silent --fail http://localhost:3001; do echo "Waiting for Frontend..."; sleep 2; done'
+        echo "Frontend is up!"
+        
+    - name: Show Running Containers
+      if: failure()
+      run: docker ps -a
+
+    - name: Show Logs
+      if: failure()
+      run: docker-compose logs
+      
+    - name: Teardown
+      run: docker-compose down

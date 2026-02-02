@@ -1,0 +1,158 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.createButton {
+    background: var(--primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.createButton:hover {
+    background: var(--primary-hover);
+}
+
+.tableWrapper {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    background: var(--background);
+    text-align: left;
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--secondary);
+    border-bottom: 1px solid var(--border);
+}
+
+.table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.eventInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.eventTitle {
+    font-weight: 600;
+}
+
+.eventLocation {
+    font-size: 0.8rem;
+    color: var(--secondary);
+}
+
+.badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.published {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.draft {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.canceled {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.completed {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.rowActions {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.actionBtn {
+    background: none;
+    border: 1px solid var(--border);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.actionBtn:hover {
+    background: var(--background);
+    border-color: var(--secondary);
+}
+
+.danger {
+    color: var(--error);
+    border-color: var(--error);
+}
+
+.danger:hover {
+    background: #fee2e2;
+}
+
+.actionLink,
+.viewLink {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.viewLink {
+    color: var(--secondary);
+}
+
+.actionLink:hover,
+.viewLink:hover {
+    text-decoration: underline;
+}

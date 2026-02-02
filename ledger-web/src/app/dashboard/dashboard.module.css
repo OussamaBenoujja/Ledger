@@ -1,0 +1,181 @@
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 1.25rem;
+    color: var(--secondary);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 500;
+}
+
+.role {
+    background: var(--background);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    color: var(--secondary);
+    border: 1px solid var(--border);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1rem;
+}
+
+.eventTitle {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.confirmed {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.pending {
+    background: #fff7ed;
+    color: #c2410c;
+}
+
+.canceled {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.refused {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.details {
+    font-size: 0.9rem;
+    color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.bookedDate {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.actions {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.ticketButton {
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.cancelButton {
+    background: transparent;
+    color: var(--error);
+    padding: 0.5rem;
+    border: 1px solid var(--error);
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.ticketButton:hover {
+    opacity: 0.9;
+}
+
+.cancelButton:hover {
+    background: #fee2e2;
+}
+
+.linkButton {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--secondary);
+    text-decoration: underline;
+    margin-top: 0.5rem;
+}
+
+.empty {
+    text-align: center;
+    padding: 4rem;
+    background: var(--background);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.button {
+    background: var(--text-main);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-weight: 500;
+}

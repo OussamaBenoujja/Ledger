@@ -1,0 +1,146 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.nav {
+    margin-bottom: 2rem;
+}
+
+.nav a {
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+.nav a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 4rem;
+}
+
+@media (max-width: 768px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.header {
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.badge {
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.published {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.draft {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.canceled {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.meta {
+    display: flex;
+    gap: 3rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+
+.metaItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.label {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.value {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.description h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.description p {
+    line-height: 1.7;
+    color: var(--text-muted);
+}
+
+.sidebar {
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+}
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.capacityBar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.capacityLabel {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    color: var(--secondary);
+}
+
+.progressBar {
+    height: 8px;
+    background: var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background: var(--primary);
+    border-radius: 4px;
+}

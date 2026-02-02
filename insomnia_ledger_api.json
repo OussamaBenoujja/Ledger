@@ -1,0 +1,657 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2026-02-06T12:00:00.000Z",
+    "__export_source": "insomnia.desktop.app:v2023.5.8",
+    "resources": [
+        {
+            "_id": "req_register",
+            "parentId": "fld_auth",
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "url": "{{ _.base_url }}/auth/register",
+            "name": "Register",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"email\": \"user@example.com\",\n\t\"password\": \"password123\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1700000000000,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_login",
+            "parentId": "fld_auth",
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "url": "{{ _.base_url }}/auth/login",
+            "name": "Login",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"email\": \"user@example.com\",\n\t\"password\": \"password123\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1600000000000,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_me",
+            "parentId": "fld_users",
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "url": "{{ _.base_url }}/users/me",
+            "name": "Get Me",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1700000000000,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_user_id",
+            "parentId": "fld_users",
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "url": "{{ _.base_url }}/users/USER_ID_HERE",
+            "name": "Get User (Admin)",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1600000000000,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_update_role",
+            "parentId": "fld_users",
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "url": "{{ _.base_url }}/users/USER_ID_HERE/role",
+            "name": "Update Role (Admin)",
+            "description": "",
+            "method": "PATCH",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"role\": \"ADMIN\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1500000000000,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_create_event",
+            "parentId": "fld_events",
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "url": "{{ _.base_url }}/events",
+            "name": "Create Event (Admin)",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"title\": \"Tech Meetup\",\n\t\"description\": \"A great tech meetup.\",\n\t\"startsAt\": \"2024-12-25T18:00:00.000Z\",\n\t\"location\": \"Convention Center\",\n\t\"capacity\": 100\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1700000000000,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_get_events",
+            "parentId": "fld_events",
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "url": "{{ _.base_url }}/events",
+            "name": "List Events (Admin)",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [
+                {
+                    "name": "status",
+                    "value": "DRAFT",
+                    "disabled": true
+                },
+                {
+                    "name": "limit",
+                    "value": "10"
+                },
+                {
+                    "name": "offset",
+                    "value": "0"
+                }
+            ],
+            "headers": [],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1600000000000,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_get_event",
+            "parentId": "fld_events",
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "url": "{{ _.base_url }}/events/EVENT_ID",
+            "name": "Get Event (Admin)",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1500000000000,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_update_event",
+            "parentId": "fld_events",
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "url": "{{ _.base_url }}/events/EVENT_ID",
+            "name": "Update Event (Admin)",
+            "description": "",
+            "method": "PATCH",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"title\": \"Updated Title\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1400000000000,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_publish_event",
+            "parentId": "fld_events",
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "url": "{{ _.base_url }}/events/EVENT_ID/publish",
+            "name": "Publish Event (Admin)",
+            "description": "",
+            "method": "PATCH",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1300000000000,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_cancel_event",
+            "parentId": "fld_events",
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "url": "{{ _.base_url }}/events/EVENT_ID/cancel",
+            "name": "Cancel Event (Admin)",
+            "description": "",
+            "method": "PATCH",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1200000000000,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_public_events",
+            "parentId": "fld_events",
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "url": "{{ _.base_url }}/events/public",
+            "name": "List Public Events",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [
+                {
+                    "name": "limit",
+                    "value": "10"
+                },
+                {
+                    "name": "offset",
+                    "value": "0"
+                }
+            ],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1100000000000,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_public_event_id",
+            "parentId": "fld_events",
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "url": "{{ _.base_url }}/events/public/EVENT_ID",
+            "name": "Get Public Event",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1000000000000,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_create_res",
+            "parentId": "fld_reservations",
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "url": "{{ _.base_url }}/reservations",
+            "name": "Create Reservation",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"eventId\": \"EVENT_ID\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1700000000000,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_list_res",
+            "parentId": "fld_reservations",
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "url": "{{ _.base_url }}/reservations",
+            "name": "List Reservations (Admin)",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [
+                {
+                    "name": "eventId",
+                    "value": "",
+                    "disabled": true
+                },
+                {
+                    "name": "userId",
+                    "value": "",
+                    "disabled": true
+                }
+            ],
+            "headers": [],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1600000000000,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_my_res",
+            "parentId": "fld_reservations",
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "url": "{{ _.base_url }}/reservations/me",
+            "name": "My Reservations",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1500000000000,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_cancel_res",
+            "parentId": "fld_reservations",
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "url": "{{ _.base_url }}/reservations/RESERVATION_ID/cancel",
+            "name": "Cancel Reservation",
+            "description": "",
+            "method": "PATCH",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1400000000000,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_update_res_status",
+            "parentId": "fld_reservations",
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "url": "{{ _.base_url }}/reservations/RESERVATION_ID/status",
+            "name": "Update Status (Admin)",
+            "description": "",
+            "method": "PATCH",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"status\": \"CONFIRMED\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1300000000000,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_get_ticket",
+            "parentId": "fld_reservations",
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "url": "{{ _.base_url }}/reservations/RESERVATION_ID/ticket",
+            "name": "Get PDF Ticket",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {
+                "type": "bearer",
+                "token": "{{ _.token }}"
+            },
+            "metaSortKey": -1200000000000,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "env_local",
+            "parentId": "wrk_ledger",
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "name": "Local",
+            "data": {
+                "base_url": "http://localhost:3000",
+                "token": "YOUR_JWT_TOKEN_HERE"
+            },
+            "dataPropertyOrder": {
+                "&base_url": "base_url",
+                "&token": "token"
+            },
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1700000000000,
+            "_type": "environment"
+        },
+        {
+            "_id": "wrk_ledger",
+            "parentId": null,
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "name": "Ledger API",
+            "description": "",
+            "scope": "collection",
+            "_type": "workspace"
+        },
+        {
+            "_id": "fld_auth",
+            "parentId": "wrk_ledger",
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "name": "Auth",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1700000000000,
+            "_type": "request_group"
+        },
+        {
+            "_id": "fld_users",
+            "parentId": "wrk_ledger",
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "name": "Users",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1600000000000,
+            "_type": "request_group"
+        },
+        {
+            "_id": "fld_events",
+            "parentId": "wrk_ledger",
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "name": "Events",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1500000000000,
+            "_type": "request_group"
+        },
+        {
+            "_id": "fld_reservations",
+            "parentId": "wrk_ledger",
+            "modified": 1700000000000,
+            "created": 1700000000000,
+            "name": "Reservations",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1400000000000,
+            "_type": "request_group"
+        }
+    ]
+}
