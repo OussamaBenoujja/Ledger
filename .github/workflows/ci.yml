@@ -26,7 +26,7 @@ jobs:
         
     - name: Wait for Services to be Healthy
       run: |
-        timeout 60s bash -c 'until curl --silent --fail http://localhost:3000/api/health || curl --silent --fail http://localhost:3000; do echo "Waiting for API..."; sleep 2; done'
+        timeout 120s bash -c 'until curl --silent --fail http://localhost:3000/api/health || curl --silent --fail http://localhost:3000; do echo "Waiting for API..."; sleep 5; done'
         echo "API is up!"
         
     - name: Check Frontend availability

@@ -3,6 +3,7 @@ services:
   db:
     image: postgres:13
     container_name: ledger_db
+    restart: always
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
@@ -18,6 +19,7 @@ services:
     build:
       context: ./ledger-api
     container_name: ledger_api
+    restart: always
     ports:
       - '3000:3000'
     environment:
