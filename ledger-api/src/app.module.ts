@@ -34,6 +34,7 @@ import { ReservationsModule } from './reservations/reservations.module';
     ReservationsModule],
   controllers: [AppController],
   providers: [
+    AppService,
     { provide: APP_GUARD, useClass: JwtAuthGaurd },
     {
       provide: APP_GUARD,
