@@ -2,7 +2,8 @@
 
 import EventForm from "@/components/EventForm";
 import { api } from "@/lib/api";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function EditEventPage() {
     const params = useParams();
