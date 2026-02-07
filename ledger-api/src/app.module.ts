@@ -32,7 +32,7 @@ import { ReservationsModule } from './reservations/reservations.module';
     AuthModule,
     EventsModule,
     ReservationsModule],
-  //controllers: [AppController],
+  controllers: [AppController],
   providers: [
     { provide: APP_GUARD, useClass: JwtAuthGaurd },
     {
