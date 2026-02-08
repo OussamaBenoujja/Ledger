@@ -6,15 +6,15 @@
 
 ---
 
-## 🚀 Features
+## Features
 
-### 🏢 For Administrators
+### For Administrators
 - **Event Management**: Create, edit, publish, and cancel events.
 - **Capacity Tracking**: Set maximum capacity and monitor remaining seats in real-time.
 - **Reservation Control**: View all reservations (by event or participant), confirm or reject them.
 - **Dashboard**: Quick overview of upcoming events and occupancy stats.
 
-### 👤 For Participants
+### For Participants
 - **Event Catalog**: Browse all published events with details (date, location, seats).
 - **Reservation**: Book a seat for an event (if available and not already booked).
 - **My Reservations**: View status of bookings (Pending, Confirmed, etc.).
@@ -22,29 +22,29 @@
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Backend (`ledger-api`)
-- **Framework**: NestJS (TypeScript)
-- **Database**: PostgreSQL 13 (via TypeORM)
-- **Authentication**: JWT & Passport (Role-Based: ADMIN, USER)
+- ![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white) **Framework**
+- ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white) **Database**
+- ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens) **Authentication**
 - **Validation**: Global `class-validator` pipes & DTOs
 - **Error Handling**: Centralized Global Exception Filter
 
 ### Frontend (`ledger-web`)
-- **Framework**: Next.js 15 (App Router)
-- **Language**: TypeScript
+- ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) **Framework**
+- ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) **Language**
 - **Styling**: CSS Modules
 - **State**: React Context API (`AuthContext`)
 - **Rendering**: Hybrid SSR (Public Catalog) & CSR (Dashboards)
 
 ### DevOps & Infrastructure
-- **Containerization**: Docker & Docker Compose
-- **CI/CD**: GitHub Actions (Lint, Test, Build, Push to Docker Hub)
+- ![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white) **Containerization**
+- ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white) **CI/CD**
 
 ---
 
-## 📦 Installation & Setup
+## Installation & Setup
 
 ### Prerequisites
 - Docker & Docker Compose
@@ -76,7 +76,7 @@
 
 ---
 
-## 🧪 Testing
+## Testing
 
 The project includes both backend and frontend tests.
 
@@ -91,7 +91,7 @@ The project includes both backend and frontend tests.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 - `ledger-api/`: NestJS Backend application.
 - `ledger-web/`: Next.js Frontend application.
@@ -101,5 +101,5 @@ The project includes both backend and frontend tests.
 
 ---
 
-## 📜 License
+## License
 This project is part of a training brief and is currently Unlicensed.
