@@ -3,8 +3,10 @@ import styles from "./events.module.css";
 import Link from "next/link";
 import HeaderActions from "@/components/HeaderActions";
 
+import { getApiUrl } from "@/lib/config";
+
 async function getEvents(): Promise<Event[]> {
-    const res = await fetch('http://localhost:3000/events/public', {
+    const res = await fetch(`${getApiUrl()}/events/public`, {
         cache: 'no-store'
     });
 

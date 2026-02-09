@@ -4,8 +4,10 @@ import Link from "next/link";
 import BookingActions from "@/components/BookingActions";
 import { notFound } from "next/navigation";
 
+import { getApiUrl } from "@/lib/config";
+
 async function getEvent(id: string): Promise<Event> {
-    const res = await fetch(`http://localhost:3000/events/public/${id}`, {
+    const res = await fetch(`${getApiUrl()}/events/public/${id}`, {
         cache: 'no-store'
     });
 
