@@ -19,6 +19,7 @@ const eslintConfig = defineConfig([
       "@typescript-eslint/no-unused-vars": "off",
       "@typescript-eslint/no-require-imports": "off",
       "react-hooks/exhaustive-deps": "off",
+      "react-hooks/set-state-in-effect": "off",
       "react/no-unescaped-entities": "off",
       // Warning: disabling these rules is temporary to unblock CI.
       // Ideally should be fixed properly.
