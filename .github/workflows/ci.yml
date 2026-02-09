@@ -20,9 +20,34 @@ jobs:
     - name: Install Docker Compose
       run: sudo apt-get update && sudo apt-get install -y docker-compose
 
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install & Test (Backend)
+      run: |
+        cd ledger-api
+        npm ci
+        npm run lint
+        npm run test
+
+    - name: Install & Test (Frontend)
+      run: |
+        cd ledger-web
+        npm ci
+        npm run lint
+        npm run test -- --passWithNoTests
+
     - name: Build and Start Stack
       run: |
         docker-compose up -d --build
+
+    - name: Run E2E Tests (Backend)
+      run: |
+        # Wait for DB to be healthy (handled by depends_on, but good to be safe)
+        sleep 10
+        docker exec ledger_api npm run test:e2e
         
  
         
