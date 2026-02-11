@@ -16,7 +16,6 @@ import { UpdateEventDto } from './dto/update-event.dto';
 import { Public } from '../auth/public.decorator';
 
 
-
 @Controller('events')
 export class EventsController {
 
@@ -29,6 +28,7 @@ export class EventsController {
             description: dto.description,
             startsAt: new Date(dto.startsAt),
             location: dto.location,
+            image: dto.image,
             capacity: dto.capacity,
         });
     }

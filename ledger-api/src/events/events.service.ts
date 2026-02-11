@@ -17,6 +17,7 @@ export class EventsService {
         description: string;
         startsAt: Date;
         location: string;
+        image: string;
         capacity: number;
     }) {
         const event = this.eventsRepository.create({
@@ -24,6 +25,7 @@ export class EventsService {
             description: params.description.trim(),
             startsAt: params.startsAt,
             location: params.location.trim(),
+            image: params.image.trim(),
             capacity: params.capacity,
             status: EventStatus.DRAFT,
         });

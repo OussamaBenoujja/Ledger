@@ -41,6 +41,7 @@ describe('EventsController', () => {
         description: 'Desc',
         startsAt: '2025-01-01T00:00:00Z',
         location: 'Loc',
+        image: 'https://ranodmurl.com',
         capacity: 10,
       };
       // Controller expects Date object conversion handled by Pipes usually, 

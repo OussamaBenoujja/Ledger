@@ -19,6 +19,9 @@ export class Event {
     @Column()
     location: string;
 
+    @Column({ default: '' })
+    image: string;
+
     @Column('int')
     capacity: number;
 

@@ -57,6 +57,7 @@ describe('EventsService', () => {
         description: 'Desc',
         startsAt: new Date(),
         location: 'Loc',
+        image: 'https://randomImage.com',
         capacity: 50,
       };
 

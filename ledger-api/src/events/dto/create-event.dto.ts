@@ -16,10 +16,12 @@ export class CreateEventDto {
     @IsDateString()
     startsAt: string;
 
-
     @IsString()
     @IsNotEmpty()
     location: string;
+
+    @IsString()
+    image: string;
 
 
     @IsInt()

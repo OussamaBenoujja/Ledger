@@ -22,7 +22,7 @@ export interface Event {
     id: string;
     title: string;
     description: string;
-    startsAt: string; // Changed from date to match backend
+    startsAt: string;
     location: string;
     capacity: number;
     filled_participants: number;
